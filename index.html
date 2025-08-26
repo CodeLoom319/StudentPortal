@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Portal</title>
+        <link rel="stylesheet" href="headerCSS.css">
+        <link rel="stylesheet" href="homeCSS.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%; 
+            width: 100%;
+            overflow-x: hidden; 
+            margin: 0; 
+            padding: 0; 
+        }
+        @media (max-width: 992px) {
+            .footer .row {
+                flex-wrap: wrap; 
+            }
+            .footer .col-lg-3 {
+                flex: 0 0 50%; 
+                max-width: 50%; 
+            }
+        }
+        @media (max-width: 576px) {
+            .footer .col-lg-3 {
+                flex: 0 0 100%; 
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 359px) {
+            body{
+                width:100%;
+            }
+        }
+
+        #screen-reader-button {
+            background-color: transparent; 
+            border: 2px solid black;
+            border-radius: 50%;
+            width: 50px;
+            height: 40px; 
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            cursor: pointer; 
+            transition: background-color 0.3s, transform 0.3s; 
+        }
+        #screen-reader-button:hover {
+            background-color: black; 
+            transform: scale(1.1); 
+        }
+        #screen-reader-button i {
+            color: white; 
+            font-size: 24px; 
+        }
+        </style>
+    </head>
+    <body>
+        
+        <header class="header" >
+            <nav class="navbar">
+                <a href="#" class="nav-logo" aria-label="Web Development Academy Logo"><i class="fa fa-graduation-cap"></i>&nbsp;WDA</a>
+                <ul class="nav-menu" aria-label="Main Navigation">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" tabindex="1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./courses.html" class="nav-link" accesskey="c" title="Go to Courses (alt+c)" tabindex="2">Courses</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Pages&#9662;</a>
+                        <ul class="dropdown-menu fade-down m-0" aria-label="Dropdown Menu">
+                            <li><a href="./team.html" class="dropdown-item" accesskey="o" title="Go to Team (alt+o)" tabindex="3">Our Team</a></li>
+                            <li><a href="./testimonial.html" class="dropdown-item" accesskey="t" title="Go to Testimonial (alt+t)" tabindex="4">Testimonial</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contactUs.html" class="nav-link" accesskey="u" title="Go to Contact (alt+u)" tabindex="5">Contact</a>
+                    </li>
+                    <li>
+                        <button id="themeToggle" class="toggle-button"  aria-label="dark/light mode" tabindex="6">
+                            <span class="toggle-container"><i class="fas fa-moon" id="toggle-icon"></i></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="screen-reader-button" aria-label="Activate Screen Reader" title="Click to activate screen reader" tabindex="7">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </li>
+                </ul>
+                <div class="hamburger" aria-label="Toggle Navigation" role="button" >
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        <!--Carousel start-->
+        
+            <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">  
+                        <div class="carousel-caption">
+                            <h3>Your Journey to Excellence Begins Here</h3>
+                            <p>Empowering students with the skills and knowledge to thrive in the digital world.</p>
+                        </div>
+                    </div>
+                    <div class="item"> 
+                        <div class="carousel-caption">
+                            <h3>Unlock your potential with hands-on training and expert guidance—your future starts here!</h3>
+                            <p>Join us to unlock your potential and gain the expertise needed to excel in the ever-evolving tech industry!</p>
+                        </div>
+                    </div>
+                    <div class="item"> 
+                        <div class="carousel-caption">
+                            <h3>Explore our innovative programs and take the first step towards your dream job in tech!</h3>
+                            <p>Discover hands-on learning opportunities that prepare you for success in the evolving digital landscape.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carouselFade" role="button" data-slide="prev" aria-label="Previous Slide" tabindex="8">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carouselFade" role="button" data-slide="next" aria-label="Next Slide" tabindex="9">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!--Carousel ends-->
+            
+            <!-- About Start -->
+            <section class="about" id="about1">
+                <div class="about-content">
+                    <div class="text-content">
+                        <h1>Welcome to Web Development Academy</h1>
+                        <p style="font-size: 20px; line-height: 1.8; color: #4A4A4A; margin-bottom: 20px; background-color: #f9f9f9; padding: 15px; border-left: 5px solid #007BFF; border-radius: 5px;">At the Web Development Academy, we believe in the power of technology to transform lives and drive innovation in every industry. 
+                            Our academy is dedicated to providing students with cutting-edge skills, practical knowledge, 
+                            and hands-on experience in the ever-evolving world of web development.</p>
+                        <p style="font-size: 20px; line-height: 1.8; color: #4A4A4A; margin-bottom: 20px; background-color: #f9f9f9; padding: 15px; border-left: 5px solid #007BFF; border-radius: 5px;">We understand that the digital landscape is constantly changing, and staying ahead of the curve is essential for success. 
+                                That’s why our programs are designed to offer a comprehensive and immersive learning experience, covering everything from 
+                                foundational web development concepts to advanced coding techniques, UI/UX design, responsive web development, and backend technologies. Our expert instructors bring real-world industry experience to the classroom, ensuring that you 
+                                receive top-tier education with practical applications..</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="./img1/about.jpg" alt="About Image">
+                </div>
+            </section>
+            <!-- About Ends -->
+            
+            <!-- Service Start -->
+              <div class=" py-5" style="margin: 30px 15px;">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item text-center pt-3">
+                            <a href="./team.html" class="p-4 d-block  text-dark" style="text-decoration: none; color:black;"> 
+                                <div class="p-4">
+                                    <i class="fa fa-3x fa-graduation-cap text-primary mb-4" aria-hidden="true"></i>
+                                    <h5 class="mb-3">Skilled Instructors</h5>
+                                    <p>Our expert faculty members are dedicated to fostering your growth and success in web development.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item text-center pt-3">
+                            <a href="./career_support.html" class="p-4 d-block  text-dark" style="text-decoration: none; color:black;">
+                                <div class="p-4">
+                                    <i class="fa fa-3x fa-globe text-primary mb-4" aria-hidden="true"></i>
+                                    <h5 class="mb-3">Career Support</h5>
+                                    <p>Get personalized career advice and support to help you navigate your journey in the tech industry.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item text-center pt-3">
+                            <a href="./home_Projects1.html" class="p-4 d-block  text-dark" style="text-decoration: none; color:black;">
+                                <div class="p-4">
+                                    <i class="fa fa-3x fa-home text-primary mb-4" aria-hidden="true"></i>
+                                    <h5 class="mb-3">Hands-on Projects</h5>
+                                    <p>Engage in practical home projects that reinforce your learning and help you apply your skills in real-world scenarios.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item text-center pt-3">
+                            <a href="./book_oasis.html" class="p-4 d-block  text-dark" style="text-decoration: none; color:black;">
+                                <div class="p-4">
+                                    <i class="fa fa-3x fa-book-open text-primary mb-4" aria-hidden="true"></i>
+                                    <h5 class="mb-3">Book Oasis</h5>
+                                    <p>Discover our well-stocked library, offering a variety of books and resources to support your learning journey in web development.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service End -->
+            
+            <!--Number increment-->
+            <div class="counter_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="count_box box_hover">
+                                <h3><span class="timer">3</span>K+</h3>
+                                <h4>ENROLLED</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="count_box box_center">
+                        <h3><span class="timer">50</span>+</h3>
+                        <h4>FACULTY MEMBERS</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="count_box box_hover">
+                        <h3><span class="timer">20</span>+</h3>
+                        <h4>CLUBS AND ACTIVITIES</h4>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+    <!--Number increment Ends-->
+
+    <!-- Footer Start -->
+    <div class="footer bg-dark text-light pt-5 mt-5">
+        <div class="container-fluid con"> 
+            <div class="row" style="display:flex;">
+                <div class="col-lg-3 col-md-6 mb-4 quick-links">
+                    
+                    <h4 class="text-white mb-3">Quick Links</h4>
+                    <a class="btn btn-link text-light" href="#about1" onclick="smoothScroll(event, '#about1')" tabindex="10">About Us</a>
+                    <a class="btn btn-link text-light" href="./contactUs.html" tabindex="11">Contact Us</a>
+                    <a class="btn btn-link text-light" href="./Privacy_Policy.pdf" target="_blank" tabindex="12">Privacy Policy</a>
+
+                    <a class="btn btn-link text-light" href="./Terms_and_Conditions.pdf" target="_blank" tabindex="13">Terms and Conditions</a>
+                    <a class="btn btn-link text-light" href="./contactUs.html" tabindex="14">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3" style="margin-right: 0.5em;"></i>Manipal Karnataka India</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3" style="margin-right: 0.5em;"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3" style="margin-right: 0.5em;"></i>info@wda.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4"> 
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Sign up for our newsletter.</p>
+                    <input class="form-control border-0" type="text" accesskey="p" title="To signup(alt+p)" placeholder="Your email">
+                    <button type="button" class="btn btn-primary mt-2" onclick="validateEmail()">Sign Up</button>
+                    
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4"> 
+                    <h4 class="text-white mb-3">Follow Us</h4>
+                    <div class="d-flex">
+                        <a class="btn btn-outline-light me-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light me-2" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    &copy; <a class="text-light" href="#">WDA</a>, All Right Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <script src="headerScript.js"></script>
+    <script src="homeScript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl.carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script>
+    let isSpeaking = false;
+    let speech = new SpeechSynthesisUtterance(); 
+
+    document.getElementById('screen-reader-button').addEventListener('click', function() {
+        const sectionsToRead = document.querySelectorAll('h1, h2, p'); 
+        let textToRead = '';
+        
+        sectionsToRead.forEach(section => {
+            textToRead += section.innerText + ' ';
+        });
+        
+        if (isSpeaking) {
+            window.speechSynthesis.cancel(); 
+            isSpeaking = false;
+        } else {
+            speech.text = textToRead; 
+            window.speechSynthesis.speak(speech); 
+            isSpeaking = true;
+
+            speech.onend = function() {
+                isSpeaking = false; 
+            };
+        }
+    });
+    </script>
+    </body>
+</html>

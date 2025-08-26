@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Instructors</title>
+        <link rel="stylesheet" href="headerCSS.css">
+        <link rel="stylesheet" href="page.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+        .img-fluid{
+             width:260px;
+            }
+            #screen-reader-button {
+                background-color: transparent; 
+                border: 2px solid black; 
+                border-radius: 50%; 
+                width: 50px; 
+                height: 40px; 
+                display: flex; 
+                align-items: center;
+                justify-content: center; 
+                cursor: pointer; 
+                transition: background-color 0.3s, transform 0.3s; 
+            }
+            #screen-reader-button:hover {
+                background-color: black;
+                transform: scale(1.1); 
+            }
+            #screen-reader-button i {
+                color: white; 
+                font-size: 24px; 
+            }
+        </style>
+    </head>
+   
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <a href="#" class="nav-logo" aria-label="Web Development Academy Logo"><i class="fa fa-graduation-cap"></i>&nbsp;WDA</a>
+                <ul class="nav-menu" aria-label="Main Navigation">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link" accesskey="h" title="Go to Home Page (alt+h)">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./courses.html" class="nav-link" accesskey="c" title="Go to Courses (alt+c)">Courses</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Pages&#9662;</a>
+                        <ul class="dropdown-menu fade-down m-0" aria-label="Dropdown Menu">
+                            <li><a href="./team.html" class="dropdown-item active" accesskey="o" title="Go to Team (alt+o)">Our Team</a></li>
+                            <li><a href="./testimonial.html" class="dropdown-item" accesskey="t" title="Go to Testimonial (alt+t)">Testimonial</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contactUs.html" class="nav-link" accesskey="u" title="Go to Contact (alt+u)">Contact</a>
+                    </li>
+                    <li>
+                        <button id="themeToggle" class="toggle-button"  aria-label="dark/light mode">
+                            <span class="toggle-container"><i class="fas fa-moon" id="toggle-icon"></i></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="screen-reader-button" aria-label="Activate Screen Reader" title="Click to activate screen reader">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </li>
+                </ul>
+                <div class="hamburger" aria-label="Toggle Navigation" role="button" >
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        <!-- Header End -->
+         
+        <!-- Team Start -->
+         <div class="instructors py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb2">Expert Instructors</h1>
+                    <p class="instructor-insight"><b>Our instructors are not just educators; they are passionate mentors dedicated to guiding students on their academic journeys. Each instructor brings a wealth of knowledge and experience, fostering an environment where curiosity thrives. They believe that education is not merely about imparting facts, but about inspiring students to think critically and embrace lifelong learning. As one instructor beautifully puts it, "Teaching is the art of awakening the curiosity of young minds, igniting their passion for discovery." Their commitment goes beyond the classroom, as they provide personalized support and encouragement, helping students realize their potential and pursue their dreams with confidence. Each lesson is a step towards building a brighter future, and our instructors are honored to be part of this transformative journey.</b></p>
+                </div>
+                <div class="row g-4">
+                    <div class="instructor col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="card bg-light">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="img/image18.jpg" alt="">
+                            </div>
+                            <div class="social d-flex justify-content-center" style="margin-top: -23px;">
+                                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb1">Sofia Rossi</h5>
+                                <small>Professor</small><br>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-alt checked"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instructor col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="card bg-light">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="img/image28.jpg" alt="">
+                            </div>
+                            <div class="social d-flex justify-content-center" style="margin-top: -23px;">
+                                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb1">Yuna Takahashi</h5>
+                                <small>Associate Professor</small><br>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star-half-alt checked"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instructor col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="card bg-light">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="img/image26.jpg" alt="">
+                            </div>
+                            <div class="social d-flex justify-content-center" style="margin-top: -23px;">
+                                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb1">Elena González</h5>
+                                <small>Assistant Professor</small><br>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instructor col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="card bg-light">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="img/image10.jpg" alt="">
+                            </div>
+                            <div class="social d-flex justify-content-center" style="margin-top: -23px;">
+                                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb1">Anouk van</h5>
+                                <small>Assistant Professor</small><br>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="instructor col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="card bg-light">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="img/image15.jpg" alt="">
+                            </div>
+                            <div class="social d-flex justify-content-center" style="margin-top: -23px;">
+                                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb1">Christopher Klaus</h5>
+                                <small>Assistant Professor</small><br>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instructor col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="card bg-light">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="img/image9.jpg" alt="">
+                            </div>
+                            <div class="social d-flex justify-content-center" style="margin-top: -23px;">
+                                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb1">Anton Voroniuk</h5>
+                                <small>Assistant Professor</small><br>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instructor col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="card bg-light">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="img/image12.jpg" alt="">
+                            </div>
+                            <div class="social d-flex justify-content-center" style="margin-top: -23px;">
+                                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb1">Alfonso Rodriguez </h5>
+                                <small>Assistant Professor</small><br>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instructor col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="card bg-light">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="img/image14.jpg" alt="">
+                            </div>
+                            <div class="social d-flex justify-content-center" style="margin-top: -23px;">
+                                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-sm-square mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4">
+                                <h5 class="mb1">Allen Shase</h5>
+                                <small>Assistant Professor</small><br>
+                                <div class="rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="mb2">"Learning is a Journey; We're Your Guides."</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        
+        <!-- footer start -->
+        <div class="footer bg-dark text-light pt-5 mt-5">
+            <div class="container-fluid con">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4 quick-links"> 
+                        <h4 class="text-white mb-3">Quick Links</h4>
+                        <a class="btn btn-link text-light" href="#about1" onclick="smoothScroll(event, '#about1')">About Us</a>
+                        <a class="btn btn-link text-light" href="#">Contact Us</a>
+                        <a class="btn btn-link text-light" href="./Privacy_Policy.pdf" target="_blank">Privacy Policy</a>
+                        <a class="btn btn-link text-light" href="./Terms_and_Conditions.pdf" target="_blank">Terms & Condition</a>
+                        <a class="btn btn-link text-light" href="#">FAQs & Help</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4"> 
+                        <h4 class="text-white mb-3">Contact</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@wda.com</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4 class="text-white mb-3">Newsletter</h4>
+                        <p>Sign up for our newsletter.</p>
+                        <input class="form-control border-0" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary mt-2" onclick="validateEmail()">Sign Up</button>
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4 class="text-white mb-3">Follow Us</h4>
+                        <div class="d-flex">
+                            <a class="btn btn-outline-light me-2" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light me-2" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div><br><br>
+                <div class="row mt-4">
+                    <div class="col text-center">
+                        &copy; <a class="text-light" href="#">WDA</a>, All Right Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <script src="headerScript.js"></script>
+        <script src="pageScript.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/owl.carousel/1.3.3/owl.carousel.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script>
+            let isSpeaking = false;
+            let speech = new SpeechSynthesisUtterance(); 
+            document.getElementById('screen-reader-button').addEventListener('click', function() {
+                const sectionsToRead = document.querySelectorAll('h1, h2, p,h5,h6'); 
+                let textToRead = '';
+                sectionsToRead.forEach(section => {
+                    textToRead += section.innerText + ' ';
+                });
+                if (isSpeaking) {
+                    window.speechSynthesis.cancel(); 
+                    isSpeaking = false;
+                } else {
+                    speech.text = textToRead; 
+                    window.speechSynthesis.speak(speech); 
+                    isSpeaking = true; 
+                    speech.onend = function() {
+                    isSpeaking = false; 
+                };
+            }
+        });
+        </script>
+    </body>
+</html>
+
+ 

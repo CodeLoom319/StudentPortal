@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="headerCSS.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+    body.light-mode {
+        background-color: #f8f9fa;
+        color: #000;
+    }
+    body.dark-mode {
+        background-color:#001F3F;
+        color: #fff;
+    }
+    
+    .dark-mode .form-control, .dark-mode .btn-primary {
+        background-color: #333;
+        color: #fff;
+    }
+    .error {
+        color: red;
+        font-size: 0.875em;
+        margin-top: 0.25em;
+    }
+
+        #screen-reader-button {
+            background-color: transparent; 
+            border: 2px solid black;
+            border-radius: 50%;
+            width: 50px;
+            height: 40px; 
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            cursor: pointer; 
+            transition: background-color 0.3s, transform 0.3s; 
+        }
+
+        #screen-reader-button:hover {
+            background-color: black; 
+            transform: scale(1.1); 
+        }
+
+        #screen-reader-button i {
+            color: white; 
+            font-size: 24px; 
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Spacing for form fields */
+        .form-floating {
+            margin-bottom: 1.5rem;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%; 
+            width: 100%;
+            overflow-x: hidden; 
+            margin: 0; 
+            padding: 0; 
+        }
+        @media (max-width: 992px) {
+            .footer .row {
+                flex-wrap: wrap; 
+            }
+            .footer .col-lg-3 {
+                flex: 0 0 50%; 
+                max-width: 50%; 
+            }
+        }
+        @media (max-width: 576px) {
+            .footer .col-lg-3 {
+                flex: 0 0 100%; 
+                max-width: 100%;
+            }
+            h5{
+                font-size: 23px;
+            }
+            p{
+                font-size: 16px;
+            }
+            iframe{
+                width:100%;
+                margin-bottom: 3em;;
+            }
+            label, input{
+                font-size:17px;
+            }
+        }
+        @media (max-width: 359px) {
+            body{
+                width:100%;
+            }
+        }
+        iframe{
+            border:none;
+        }
+
+        .dark-mode .d-flex .i1 {
+            background-color: white;
+            color: white;
+        }
+
+        .dark-mode .btn1{
+            background-color: #195086;
+        }
+
+        .faq-item {
+            background-color: #f0f8ff; 
+            border: 1px solid #001F3F;
+            border-radius: 8px; 
+            padding: 15px; 
+            margin-bottom: 1.5rem; 
+            transition: box-shadow 0.3s; 
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-item h4 {
+            color: #001F3F; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .faq-item p {
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header" >
+        <nav class="navbar">
+            <a href="#" class="nav-logo" aria-label="Web Development Academy Logo"><i class="fa fa-graduation-cap"></i>&nbsp;WDA</a>
+            <ul class="nav-menu" aria-label="Main Navigation">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link " tabindex="1">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./courses.html" class="nav-link" accesskey="c" title="Go to Courses (alt+c)" tabindex="2">Courses</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Pages&#9662;</a>
+                    <ul class="dropdown-menu fade-down m-0" aria-label="Dropdown Menu">
+                        <li><a href="./team.html" class="dropdown-item" accesskey="o" title="Go to Team (alt+o)" tabindex="3">Our Team</a></li>
+                        <li><a href="./testimonial.html" class="dropdown-item" accesskey="t" title="Go to Testimonial (alt+t)" tabindex="4">Testimonial</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="./contactUs.html" class="nav-link active" accesskey="u" title="Go to Contact (alt+u)" tabindex="5">Contact</a>
+                </li>
+                <li>
+                    <button id="themeToggle" class="toggle-button"  aria-label="dark/light mode" tabindex="6">
+                        <span class="toggle-container"><i class="fas fa-moon" id="toggle-icon"></i></span>
+                    </button>
+                </li>
+                <li>
+                    <button id="screen-reader-button" aria-label="Activate Screen Reader" title="Click to activate screen reader" tabindex="7">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger" aria-label="Toggle Navigation" role="button" >
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
+                <h1 class="mb-5" style="margin-top:3em; margin-bottom:2em;">Contact For Any Query</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 style="font-size: 30px;">Get In Touch</h5>
+                    <p class="mb-4">Feel free to reach out to us for any queries.</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
+                            <i class="fa fa-building text-white i1" aria-hidden="true" style="font-size: 30px; color:#001F3F"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Office</h5>
+                            <p class="mb-0">Manipal, Karnataka, India</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
+                            <i class="fa fa-mobile-alt text-white i1" aria-hidden="true" style="font-size: 30px; color:#001F3F"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Mobile</h5>
+                            <p class="mb-0">+91 8764560982</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
+                            <i class="fa fa-envelope text-white i1" aria-hidden="true" style="font-size: 30px; color:#001F3F"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="text-primary">Email</h5>
+                            <p class="mb-0">info@wda.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <iframe class="position-relative rounded w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62255.61994834259!2d74.76252767248915!3d13.3538520662899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbb98fef03051c9%3A0x5ed5a1b112f76237!2sManipal%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1697714726100!5m2!1sen!2sin"
+                        style="min-height: 400px; border: none;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                    </iframe>
+                </div>
+                <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <form id="contactForm" novalidate>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" id="name" accesskey="1"  title="alt+1" placeholder="Your Name" required>
+                                    <div class="error" id="nameError"></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" class="form-control" id="email" accesskey="2" title="alt+2" placeholder="Your Email" required>
+                                    <div class="error" id="emailError"></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" accesskey="3"  title="alt+3" style="height: 150px" required></textarea>
+                                    <div class="error" id="messageError"></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3 btn1" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- FAQ Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb-5">Frequently Asked Questions</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="faq-item">
+                            <h4>1. What services do you offer?</h4>
+                            <p>Access to a wide range of academic resources, study spaces, and digital collections. Free or low-cost tutoring services, study groups, and workshops to support students academically. Support in finding internships, co-ops, and job placements through career services.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>2. How can I enroll in a course?</h4>
+                            <p>Go to the college website, look through the catalog to find courses that match your interests or degree requirements, log in to your student account, and pay fees.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="faq-item">
+                            <h4>3. What payment methods are accepted?</h4>
+                            <p>We accept various payment methods including credit cards, PayPal, and bank transfers, online payment portals, checks and money orders, cash payments, and payment plans.<br><br></p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>4. Is there a refund policy?</h4>
+                            <p>Yes, we have a refund policy in place. Please refer to our terms and conditions for more details.<br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQ End -->
+         
+        <!-- Footer Start -->
+        <div class="footer bg-dark text-light pt-5 mt-5">
+            <div class="container-fluid con"> 
+                <div class="row" style="display:flex;">
+                    <div class="col-lg-3 col-md-6 mb-4 quick-links"> 
+                        <h4 class="text-white mb-3">Quick Links</h4>
+                        <a class="btn btn-link text-light" href="#about1" onclick="smoothScroll(event, '#about1')">About Us</a>
+                        <a class="btn btn-link text-light" href="#">Contact Us</a>
+                        <a class="btn btn-link text-light" href="./Privacy_Policy.pdf" target="_blank">Privacy Policy</a>
+                        <a class="btn btn-link text-light" href="./Terms_and_Conditions.pdf" target="_blank">Terms & Condition</a>
+                        <a class="btn btn-link text-light" href="#">FAQs & Help</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4"> 
+                        <h4 class="text-white mb-3">Contact</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Manipal Karnataka India</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 8764560982</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@wda.com</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4"> 
+                        <h4 class="text-white mb-3">Newsletter</h4>
+                        <p>Sign up for our newsletter.</p>
+                        <input class="form-control border-0" id="footerEmail" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary mt-2 btn1" onclick="validateEmail()">Sign Up</button>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4"> 
+                        <h4 class="text-white mb-3">Follow Us</h4>
+                        <div class="d-flex">
+                            <a class="btn btn-outline-light me-2" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light me-2" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div><br><br>
+                <div class="row mt-4">
+                    <div class="col text-center">
+                        &copy; <a class="text-light" href="#">WDA</a>, All Right Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+   <!-- Footer End -->
+    
+   <script src="headerScript.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/owl.carousel/1.3.3/owl.carousel.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+   <script>
+   $(document).ready(function() {
+    $('#name').on('input', function() {
+        const name = $(this).val();
+        const nameError = $('#nameError');
+        
+        if (/\d/.test(name)) {
+            nameError.text('Name cannot contain numbers.');
+        } else {
+            nameError.text('');
+        }
+    });
+    
+    $('#email').on('input', function() {
+        const email = $(this).val();
+        const emailError = $('#emailError');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            emailError.text('Please enter a valid email address.');
+        } else {
+            emailError.text('');
+        }
+    });
+    
+    $('#message').on('input', function() {
+        const message = $(this).val();
+        const messageError = $('#messageError');
+        
+        if (message.trim() === '') {
+            messageError.text('Message cannot be empty.');
+        } else {
+                messageError.text('');
+        }
+    });
+    
+    $('#contactForm').on('submit', function(event) {
+        
+        if ($('#nameError').text() || $('#emailError').text() || $('#messageError').text()) {
+                    event.preventDefault();
+                }
+            });
+    });
+
+        let isSpeaking = false;
+    let speech = new SpeechSynthesisUtterance(); 
+
+    document.getElementById('screen-reader-button').addEventListener('click', function() {
+        const sectionsToRead = document.querySelectorAll('h1, h2, p'); 
+        let textToRead = '';
+        
+        sectionsToRead.forEach(section => {
+            textToRead += section.innerText + ' ';
+        });
+        
+        if (isSpeaking) {
+            window.speechSynthesis.cancel(); 
+            isSpeaking = false;
+        } else {
+            speech.text = textToRead; 
+            window.speechSynthesis.speak(speech); 
+            isSpeaking = true;
+
+            speech.onend = function() {
+                isSpeaking = false; 
+            };
+        }
+    });
+    
+    function validateEmail() {
+        const emailInput = document.getElementById('footerEmail'); 
+        const email = emailInput.value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (emailPattern.test(email)) {
+            alert('Thank you for signing up!');
+            emailInput.value = '';
+        } else {
+            alert('Please enter a valid email address.');
+        }
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

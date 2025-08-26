@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Enroll</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+        
+        :root {
+            --teal: #001F3F;
+            --white: #ffffff;
+            --light-gray: #f4f4f4;
+            --input-border: #ccc;
+            --button-hover: #004e75;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            height: 100vh;
+            background: linear-gradient(to right, #100260, #164f94);
+            color: var(--teal);
+        }
+
+        .container {
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            width: 768px;
+            max-width: 100%;
+            min-height: 480px;
+            min-width: 370px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--teal);
+        }
+
+        .form-container {
+            display: flex;
+        }
+
+        .right-container {
+            display: flex;
+            flex: 1;
+            height: 460px;
+            background-color: var(--light-gray);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-inner-container {
+            width: 70%;
+            height: 90%;
+            text-align: center;
+        }
+
+        input,
+        textarea, 
+        select {
+            background-color: #eee;
+            border: 1px solid var(--input-border);
+            padding: 12px 15px;
+            margin: 8px 0;
+            width: 100%;
+            font-size: 0.8rem;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--teal);
+            outline: none;
+        }
+
+        button {
+            border-radius: 20px;
+            border: 1px solid var(--teal);
+            background-color: var(--teal);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: bold;
+            padding: 12px 45px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--button-hover);
+            transform: scale(1.05);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .form-container {
+                align-items: stretch; 
+                flex-direction: column; 
+            }
+            .right-container {
+                width: 100%; 
+                height: auto; 
+            }
+            .right-inner-container {
+                width: 90%;
+                margin: auto; 
+            }
+            h2 {
+                font-size: 1.5rem; 
+            }
+        }
+
+        form p {
+            text-align: left;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="right-container">
+                <div class="right-inner-container">
+                    <form>
+                        <h2>Enroll</h2>
+                        <input type="text" id="name" placeholder="Name *" required>
+                        <input type="email" id="email" placeholder="Email *" required>
+                        <input type="tel" id="phone" placeholder="Phone">
+                        <select id="gender" required>
+                            <option value="" disabled selected>Select Gender *</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <input type="date" id="dob" required>
+                        <select id="course" required>
+                            <option value="" disabled selected>Select Course *</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="graphic-design">Graphic Design</option>
+                            <option value="digital-marketing">Digital Marketing</option>
+                        </select>
+                        <button>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const phone = document.getElementById('phone');
+                const gender = document.getElementById('gender');
+                const dob = document.getElementById('dob');
+                const course = document.getElementById('course');
+                let errorMessage = '';
+                const namePattern = /^[A-Za-z\s]+$/; 
+                if (name.value.trim() === '') {
+                    errorMessage = 'Name is required.';
+                } else if (!namePattern.test(name.value.trim())) {
+                    errorMessage = 'Name must only contain letters and spaces.';
+                }
+                if (gender.value === '') {
+                    errorMessage = 'Please select a gender.';
+                }
+                const dobDate = new Date(dob.value);
+                const today = new Date();
+                const age = today.getFullYear() - dobDate.getFullYear();
+                const monthDiff = today.getMonth() - dobDate.getMonth();
+                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dobDate.getDate())) {
+                    age--; 
+                }
+                if (isNaN(dobDate.getTime()) || age < 15) {
+                    errorMessage = 'You must be at least 15 years old.';
+                }
+                if (course.value === '') {
+                    errorMessage = 'Please select a course.';
+                }
+                if (errorMessage) {
+                    alert(errorMessage);
+                    if (errorMessage === 'Name is required.') name.focus();
+                    else if (errorMessage === 'Name must only contain letters and spaces.') name.focus();
+                    else if (errorMessage === 'Please select a gender.') gender.focus();
+                    else if (errorMessage === 'Date of Birth is required.') dob.focus();
+                    else if (errorMessage === 'Please select a course.') course.focus();
+                } else {
+                    alert('Your form has been submitted successfully. We appreciate your patience as we process your request ');
+                    window.location.href = './courses.html';
+                }
+            });
+            const nameInput = document.getElementById('name');
+            nameInput.addEventListener('input', function() {
+                const namePattern = /^[A-Za-z\s]*$/; 
+                if (!namePattern.test(nameInput.value)) {
+                    nameInput.value = nameInput.value.replace(/[^A-Za-z\s]/g, '');
+                }
+            });
+            const emailInput = document.getElementById('email');
+            let emailAlertShown = false; 
+            emailInput.addEventListener('blur', function() {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailInput.value) && !emailAlertShown) {
+                    alert('Please enter a valid email address.');
+                    emailInput.value = ''; 
+                    emailInput.focus(); 
+                    emailAlertShown = true; 
+                } else if (emailPattern.test(emailInput.value)) {
+                    emailAlertShown = false; 
+                }
+            });
+            const phoneInput = document.getElementById('phone');
+            let phoneAlertShown = false; 
+            phoneInput.addEventListener('input', function() {
+                phoneInput.value = phoneInput.value.replace(/[^0-9]/g, '').slice(0, 10);
+            });
+            phoneInput.addEventListener('blur', function() {
+                if (phoneInput.value.length < 10 && !phoneAlertShown) {
+                    alert('Phone number must be exactly 10 digits.');
+                    phoneInput.focus();
+                    phoneAlertShown = true;
+                } else if (phoneInput.value.length === 10) {
+                    phoneAlertShown = false; 
+                }
+            });
+        });
+        </script>
+</body>
+</html>

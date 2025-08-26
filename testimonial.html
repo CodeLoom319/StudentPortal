@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Testimonials</title>
+        <link rel="stylesheet" href="headerCSS.css">
+        <link rel="stylesheet" href="page.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+        .img-fluid{
+            width:260px;
+        }
+        #screen-reader-button {
+            background-color: transparent; 
+            border: 2px solid black;
+            border-radius: 50%;
+            width: 50px; 
+            height: 40px; 
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            cursor: pointer; 
+            transition: background-color 0.3s, transform 0.3s; 
+        }
+        #screen-reader-button:hover {
+            background-color: black; 
+            transform: scale(1.1); 
+        }
+        #screen-reader-button i {
+            color: white;
+            font-size: 24px;
+        }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <a href="#" class="nav-logo" aria-label="Web Development Academy Logo"><i class="fa fa-graduation-cap"></i>&nbsp;WDA</a>
+                <ul class="nav-menu" aria-label="Main Navigation">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link " accesskey="h" title="Go to Home Page (alt+h)">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./courses.html" class="nav-link" accesskey="c" title="Go to Courses (alt+c)">Courses</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Pages&#9662;</a>
+                        <ul class="dropdown-menu fade-down m-0" aria-label="Dropdown Menu">
+                            <li><a href="team.html" class="dropdown-item" accesskey="o" title="Go to Team (alt+o)">Our Team</a></li>
+                            <li><a href="testimonial.html" class="dropdown-item active" accesskey="t" title="Go to Testimonial (alt+t)">Testimonial</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contactUs.html" class="nav-link" accesskey="u" title="Go to Contact (alt+u)">Contact</a>
+                    </li>
+                    <li>
+                        <button id="themeToggle" class="toggle-button"  aria-label="dark/light mode">
+                            <span class="toggle-container"><i class="fas fa-moon" id="toggle-icon"></i></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="screen-reader-button" aria-label="Activate Screen Reader" title="Click to activate screen reader">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </li>
+                </ul>
+                <div class="hamburger" aria-label="Toggle Navigation" role="button" >
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        <!-- Header End -->
+         
+        <!-- Testimonial Start-->
+
+         
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
+                    <h1 class="mb-5">Our Students Say!</h1>
+                </div>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-item active" aria-labelledby="testimonial1">
+                        <img src="img/image11.jpg" alt="Amelia Thompson's photo" aria-hidden="true">
+                        <h6 id="testimonial1" class="mb">Amelia Thompson</h6>
+                        <p>"I love how easy the portal is to navigate! Everything I need is just a click away."</p>
+                        <div class="rating">★★★★★</div>
+                        <p class="course">Course: Web Development</p>
+                    </div>
+                    <div class="testimonial-item" aria-labelledby="testimonial2">
+                        <img src="img/image8.jpg" alt="Lila Chen's photo" aria-hidden="true">
+                        <h6 id="testimonial2" class="mb">Lily Parker</h6>
+                        <p>"The student portal has all the resources I need for my classes. It's all organized perfectly."</p>
+                        <div class="rating">★★★★☆</div>
+                        <p class="course">Course: Database Management System</p>
+                    </div>
+                    <div class="testimonial-item" aria-labelledby="testimonial3">
+                        <img src="img/image40.jpg" alt="Harry Williams's photo" aria-hidden="true">
+                        <h6 id="testimonial3" class="mb">Harry Williams</h6>
+                        <p>"The portal has been a fantastic resource. I appreciate how it keeps my info in one place."</p>
+                        <div class="rating">★★★★★</div>
+                        <p class="course">Course: Graphic Design</p>
+                    </div>
+                    <div class="testimonial-item" aria-labelledby="testimonial4">
+                        <img src="img/image42.jpg" alt="George Brown's photo" aria-hidden="true">
+                        <h6 id="testimonial4" class="mb">George Brown</h6>
+                        <p>"The mobile app is very convenient for checking updates on the go!"</p>
+                        <div class="rating" >★★★★☆</div>
+                        <p class="course">Course: Mobile Development</p>
+                    </div>
+                    <div class="testimonial-item active" aria-labelledby="testimonial5">
+                        <img src="img/image28.jpg" alt="Isla Carter's photo" aria-hidden="true">
+                        <h6 id="testimonial5" class="mb">Isla Carter</h6>
+                        <p>"Centralized access to all academic and administrative information."</p>
+                        <div class="rating">★★★★★</div>
+                        <p class="course">Course: Frontend Technologies</p>
+                    </div>
+                    <div class="testimonial-item" aria-labelledby="testimonial6">
+                        <img src="img/image26.jpg" alt="Sophia Johnson's photo" aria-hidden="true">
+                        <h6 id="testimonial6" class="mb">Sophia Johnson</h6>
+                        <p>"Reduces the need for in-person visits to administrative offices."</p>
+                        <div class="rating">★★★★☆</div>
+                        <p class="course">Course: Database Management System</p>
+                    </div>
+                    <div class="testimonial-item" aria-labelledby="testimonial7">
+                        <img src="img/image15.jpg" alt="Jack Taylor's photo" aria-hidden="true">
+                        <h6 id="testimonial7" class="mb">Jack Taylor</h6>
+                        <p>"Instant access to course materials."</p>
+                        <div class="rating">★★★★★</div>
+                        <p class="course">Course: Backend Technologies</p>
+                    </div>
+                    <div class="testimonial-item" aria-labelledby="testimonial8">
+                        <img src="img/image9.jpg" alt="Noah Jones's photo" aria-hidden="true">
+                        <h6 id="testimonial8" class="mb">Noah Jones</h6>
+                        <p>"24/7 access to academic resources from anywhere."</p>
+                        <div class="rating">★★★★☆</div>
+                        <p class="course">Course: Mobile Development</p>
+                    </div>
+                    <div class="testimonial-item active" aria-labelledby="testimonial9">
+                        <img src="img/image18.jpg" alt="Mia Robinson's photo" aria-hidden="true">
+                        <h6 id="testimonial9" class="mb">Mia Robinson</h6>
+                        <p>" Links to other services, such as email and learning management systems."</p>
+                        <div class="rating">★★★★★</div>
+                        <p class="course">Course: Full-Stack Technologies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Testimonial End-->
+        
+        <!-- Footer Start -->
+         <div class="footer bg-dark text-light pt-5 mt-5">
+            <div class="container-fluid con"> 
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4 quick-links">
+                        
+                        <h4 class="text-white mb-3">Quick Links</h4>
+                        <a class="btn btn-link text-light" href="#about1" onclick="smoothScroll(event, '#about1')">About Us</a>
+                        <a class="btn btn-link text-light" href="#">Contact Us</a>
+                        <a class="btn btn-link text-light" href="./Privacy_Policy.pdf" target="_blank">Privacy Policy</a>
+    
+                        <a class="btn btn-link text-light" href="./Terms_and_Conditions.pdf" target="_blank">Terms and Conditions</a>
+                        <a class="btn btn-link text-light" href="#">FAQs & Help</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h4 class="text-white mb-3">Contact</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@wda.com</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4"> 
+                        <h4 class="text-white mb-3">Newsletter</h4>
+                        <p>Sign up for our newsletter.</p>
+                        <input class="form-control border-0" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary mt-2" onclick="validateEmail()">Sign Up</button>
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4"> 
+                        <h4 class="text-white mb-3">Follow Us</h4>
+                        <div class="d-flex">
+                            <a class="btn btn-outline-light me-2" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light me-2" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div><br><br>
+                <div class="row mt-4">
+                    <div class="col text-center">
+                        &copy; <a class="text-light" href="#">WDA</a>, All Right Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <script src="headerScript.js"></script>
+        <script src="pageScript.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/owl.carousel/1.3.3/owl.carousel.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let isSpeaking = false;
+            const speech = new SpeechSynthesisUtterance();
+            speech.rate = 1; 
+            document.getElementById('screen-reader-button').addEventListener('click', function() {
+                if (window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                    isSpeaking = false;
+                    return;
+                }
+                const sectionsToRead = document.querySelectorAll('h1, h2, p, h5, h6');
+                let textToRead = Array.from(sectionsToRead)
+                .map(section => section.innerText.trim())
+                .filter(text => text.length > 0) 
+                .join(' '); 
+                if (textToRead.length > 0) {
+                    speech.text = textToRead;
+                    window.speechSynthesis.speak(speech);
+                    isSpeaking = true;
+                    speech.onend = () => {
+                        isSpeaking = false;
+                    };
+                } else {
+                    console.warn("No text found to read.");
+                }
+            });
+        });
+        </script>
+    </body>
+</html>
